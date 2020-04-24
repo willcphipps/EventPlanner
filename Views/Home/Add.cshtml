@@ -1,0 +1,36 @@
+@model DojoActivity
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-5"><span class="text-warning"><i>Lets GET ACTIVE!!!</i></span></h1>
+        <p class="lead">Fill out the form below to register your event</p>
+        <hr class="my-2">
+            <a class="float-left btn btn-outline-primary btn-md" href="Dashboard" role="button">Dashboard</a>
+            <a class="float-right btn btn-outline-danger btn-md" href="Logout" role="button">Logout</a>
+    </div>
+</div>
+    <form asp-action="Create" method="post" class="">
+        <div class="">
+            <span asp-validation-for="ActivityName"></span>
+            <label asp-for="ActivityName"></label>
+            <input asp-for="ActivityName" class="form-control">
+        </div>
+        <div class="">
+            <span asp-validation-for="StartDate"></span>
+            <label asp-for="StartDate"></label>
+            <input asp-for="StartDate" class="form-control">
+        </div>
+        <div class="">
+            <span asp-validation-for="Duration"></span>
+            <label asp-for="Duration"></label>
+            <input asp-for="Duration" class="form-control">
+        </div>
+        <div class="">
+            <span asp-validation-for="Description"></span>
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+            <br>
+            <input type="submit" value="Create!" class="btn btn-outline-success">
+            
+        </div>
+    </form>
